@@ -1,0 +1,384 @@
+import React from 'react';
+import { Language } from './types';
+import { 
+  Briefcase, 
+  CreditCard, 
+  TrendingUp, 
+  Users,
+  Smartphone,
+  ShieldCheck,
+  Zap,
+  MessageCircle,
+  CalendarClock,
+  Building2,
+  Wallet
+} from 'lucide-react';
+
+export const TRANSLATIONS: Record<Language, any> = {
+  pt: {
+    nav: {
+      features: "Funcionalidades",
+      howItWorks: "Como Funciona",
+      pricing: "Planos",
+      login: "Entrar",
+      cta: "Começar Agora"
+    },
+    hero: {
+      badge: "🚀 Sua Agente Financeira no WhatsApp",
+      title: "Controle suas finanças conversando com a Fina",
+      subtitle: "A inteligência artificial que organiza seu dinheiro Pessoal e Empresarial (PJ) diretamente no WhatsApp. Sem planilhas, apenas conversa.",
+      ctaPrimary: "Testar Grátis Agora",
+      ctaSecondary: "Ver Planos e Preços",
+      disclaimer: "Não pedimos sua senha do banco. 100% Seguro."
+    },
+    features: {
+      title: "Tudo o que você precisa em um só lugar",
+      subtitle: "Do controle de gastos diários aos investimentos complexos.",
+      items: [
+        {
+          title: "Pessoal & PJ Inteligente",
+          desc: "O padrão é sua conta Pessoal. Para lançar na empresa, basta dizer 'na empresa', 'PJ' ou 'negócio'.",
+          icon: <Briefcase className="w-6 h-6 text-brand-600" />
+        },
+        {
+          title: "Investimentos & Cotações",
+          desc: "Cotações automáticas de Ações, FIIs e Cripto. Acompanhe a evolução do seu patrimônio em tempo real.",
+          icon: <TrendingUp className="w-6 h-6 text-brand-600" />
+        },
+        {
+          title: "Gestão de Cartões",
+          desc: "Controle limites e faturas. A Fina sabe a diferença entre 'Gastei' (Débito) e 'Comprei no Crédito'.",
+          icon: <CreditCard className="w-6 h-6 text-brand-600" />
+        },
+        {
+          title: "Plano Casal & Sócios",
+          desc: "Compartilhamento de conta para casais ou gestão com funcionários e sócios.",
+          icon: <Users className="w-6 h-6 text-brand-600" />
+        }
+      ]
+    },
+    guide: {
+      title: "Entenda o Poder da Fina",
+      subtitle: "Basta conversar naturalmente. Veja como é fácil:",
+      sections: [
+        {
+          title: "Pessoal vs PJ",
+          icon: <Building2 className="w-5 h-5" />,
+          content: "Quando você não especificar, vai para a conta **Pessoal**.\nPara **PJ/Empresa**, use palavras como 'empresa', 'PJ', 'negócio' ou 'empresarial'.",
+          examples: [
+            '"Gastei 50 no almoço" (Pessoal)',
+            '"Recebi 1200 de consultoria na conta empresarial" (PJ)'
+          ]
+        },
+        {
+          title: "Gastei vs Tenho que Pagar",
+          icon: <CalendarClock className="w-5 h-5" />,
+          content: "**Gastei**: Transação que já aconteceu (Débito/Dinheiro).\n**Tenho que pagar**: Agendamento futuro.\n**Paguei**: Confirmar algo agendado.",
+          examples: [
+            '"Gastei 230 no mercado"',
+            '"Tenho que pagar 1500 de aluguel dia 10"',
+            '"Paguei o aluguel hoje"'
+          ]
+        },
+        {
+          title: "Débito vs Crédito",
+          icon: <CreditCard className="w-5 h-5" />,
+          content: "**Débito**: Desconta agora do saldo.\n**Crédito**: Fica em aberto na fatura.\n**Parcelado**: A Fina entende '12x', 'parcelado', etc.",
+          examples: [
+            '"Comprei 85 de remédio no débito"',
+            '"Comprei notebook de 3000 em 12 parcelas no crédito Nubank"'
+          ]
+        },
+        {
+          title: "Saldo e Relatórios",
+          icon: <Wallet className="w-5 h-5" />,
+          content: "Pergunte sobre seus gastos, receitas e previsões a qualquer momento.",
+          examples: [
+            '"Qual meu saldo?"',
+            '"Quanto gastei em alimentação este mês?"',
+            '"Extrato do mês da empresa"'
+          ]
+        }
+      ]
+    },
+    howItWorks: {
+      title: "Como Funciona",
+      steps: [
+        {
+          title: "1. Salve o Contato",
+          desc: "Adicione o número da Fina na sua agenda do celular.",
+          icon: <Smartphone className="w-6 h-6 text-white" />
+        },
+        {
+          title: "2. Inicie a Conversa",
+          desc: "Envie um 'Oi' no WhatsApp para ativar sua conta.",
+          icon: <Zap className="w-6 h-6 text-white" />
+        },
+        {
+          title: "3. Converse Naturalmente",
+          desc: "Fale como se fosse um amigo: 'Gastei 50 no almoço'.",
+          icon: <MessageCircle className="w-6 h-6 text-white" />
+        }
+      ]
+    },
+    chat: {
+      title: "Experimente a Fina",
+      tabs: ["Despesas", "Receitas", "Futuros", "Relatórios"],
+      demoData: {
+        expense: [
+          { sender: 'user', text: 'Gastei 230 no mercado', time: '10:42' },
+          { sender: 'agent', text: '✅ Anotado! R$ 230,00 em Mercado (Alimentação) na conta Pessoal.', time: '10:42' },
+          { sender: 'user', text: 'Comprei material de escritório 120 na empresa', time: '14:15' },
+          { sender: 'agent', text: '🏢 Feito! R$ 120,00 lançados na conta PJ em Material de Escritório.', time: '14:15' },
+          { sender: 'user', text: 'Comprei notebook de 3000 em 12 parcelas no crédito Nubank', time: '14:20' },
+          { sender: 'agent', text: '💳 Compra parcelada registrada no Nubank (12x R$ 250,00).', time: '14:20' }
+        ],
+        income: [
+          { sender: 'user', text: 'Recebi 3500 de salário', time: '09:00' },
+          { sender: 'agent', text: '💰 Oba! Receita de R$ 3.500,00 registrada na conta Pessoal.', time: '09:00' },
+          { sender: 'user', text: 'Entrou 800 de freelance no perfil empresarial', time: '11:20' },
+          { sender: 'agent', text: '🏢 Receita PJ de R$ 800,00 registrada!', time: '11:20' }
+        ],
+        future: [
+           { sender: 'user', text: 'Tenho IPTU de 70 reais vence dia 10/01/2026 e são 3 parcelas', time: '19:00' },
+           { sender: 'agent', text: '🗓️ Agendado! 3 parcelas de R$ 70,00 para IPTU.\n1ª vence em 10/01/2026.', time: '19:00' },
+           { sender: 'user', text: 'Tenho Netflix mensal recorrente de 29,90', time: '19:05' },
+           { sender: 'agent', text: '🔄 Assinatura Netflix de R$ 29,90 configurada como recorrente mensal.', time: '19:05' }
+        ],
+        report: [
+          { sender: 'user', text: 'Qual a fatura atual do cartão Nubank?', time: '08:00' },
+          { sender: 'agent', text: '💳 Fatura Atual Nubank: R$ 1.250,00\nFechamento: 05/12\nVencimento: 12/12', time: '08:00' },
+          { sender: 'user', text: 'Resumo financeiro da empresa', time: '18:00' },
+          { sender: 'agent', text: '📊 *Resumo PJ - Mês Atual*\n\nEntradas: R$ 12.500,00\nSaídas: R$ 4.200,00\nSaldo: R$ 8.300,00', time: '18:00' }
+        ]
+      }
+    },
+    pricing: {
+      title: "Planos acessíveis em Dólar",
+      subtitle: "Comece a organizar sua vida financeira hoje.",
+      monthly: "Mensal",
+      annual: "Anual (10% OFF)",
+      saveBadge: "Economize 10%",
+      currencySymbol: "$",
+      plans: [
+        {
+          name: "Pessoal",
+          price: 7.99,
+          features: ["Conta Pessoal Ilimitada", "Gestão de Cartões e Contas", "IA no WhatsApp 24/7", "Categorização Automática", "Suporte PT/ES/EN"]
+        },
+        {
+          name: "Pro & Casal",
+          price: 9.99,
+          features: ["Tudo do plano Pessoal", "Conta PJ / Empresarial", "Investimentos (Ações/Cripto/FIIs)", "Acesso Compartilhado (Sócio/Cônjuge)", "Relatórios Avançados"],
+          highlight: true
+        }
+      ]
+    },
+    faq: {
+      title: "Perguntas Frequentes",
+      items: [
+        { q: "Como separo pessoal de PJ?", a: "O padrão é Pessoal. Para lançar na empresa, use palavras como 'empresa', 'PJ', 'negócio' ou 'empresarial' na frase." },
+        { q: "Funciona com cartão de crédito?", a: "Sim! A Fina entende parcelamentos e compras a crédito. Basta dizer 'em 12x no cartão Nubank'." },
+        { q: "Posso cancelar quando quiser?", a: "Sim, sem fidelidade no plano mensal. Cancele a qualquer momento direto pelo app." },
+        { q: "É seguro?", a: "Sim. Usamos criptografia de ponta a ponta e não solicitamos sua senha bancária para realizar transações, apenas registramos o que você nos conta." }
+      ]
+    }
+  },
+  es: {
+    nav: {
+      features: "Funciones",
+      howItWorks: "Cómo funciona",
+      pricing: "Precios",
+      login: "Entrar",
+      cta: "Empezar Ahora"
+    },
+    hero: {
+      badge: "🚀 Tu Agente Financiero en WhatsApp",
+      title: "Controla tus finanzas chateando con Fina",
+      subtitle: "La IA que organiza tu dinero personal y empresarial (PJ) directamente en WhatsApp. Sin hojas de cálculo.",
+      ctaPrimary: "Prueba Gratis Ahora",
+      ctaSecondary: "Ver Planes",
+      disclaimer: "No pedimos contraseña bancaria. 100% Seguro."
+    },
+    features: {
+      title: "Todo lo que necesitas en un solo lugar",
+      subtitle: "Desde el control de gastos diarios hasta inversiones complejas.",
+      items: [
+        { title: "Personal y Negocio", desc: "El valor predeterminado es Personal. Para empresa, di 'en la empresa' o 'negocio'.", icon: <Briefcase className="w-6 h-6 text-brand-600" /> },
+        { title: "Inversiones", desc: "Cotizaciones automáticas de Acciones y Cripto en tiempo real.", icon: <TrendingUp className="w-6 h-6 text-brand-600" /> },
+        { title: "Tarjetas", desc: "Control de facturas, límites y cuotas.", icon: <CreditCard className="w-6 h-6 text-brand-600" /> },
+        { title: "Plan Compartido", desc: "Ideal para parejas o socios.", icon: <Users className="w-6 h-6 text-brand-600" /> }
+      ]
+    },
+    guide: {
+      title: "Entiende el Poder de Fina",
+      subtitle: "Solo habla naturalmente. Mira qué fácil:",
+      sections: [
+        {
+          title: "Personal vs Negocio",
+          icon: <Building2 className="w-5 h-5" />,
+          content: "Si no especificas, va a la cuenta **Personal**.\nPara **Negocio**, usa palabras como 'empresa' o 'negocio'.",
+          examples: ['"Gasté 50 en el almuerzo" (Personal)', '"Recibí 1200 de consultoría en la empresa" (PJ)']
+        },
+        {
+          title: "Gasté vs Tengo que Pagar",
+          icon: <CalendarClock className="w-5 h-5" />,
+          content: "**Gasté**: Transacción inmediata.\n**Tengo que pagar**: Futuro.\n**Pagué**: Confirmar agendamiento.",
+          examples: ['"Gasté 230 en el mercado"', '"Tengo que pagar 1500 de alquiler el día 10"']
+        },
+        {
+          title: "Débito vs Crédito",
+          icon: <CreditCard className="w-5 h-5" />,
+          content: "**Débito**: Descuenta ahora.\n**Crédito**: A la factura.\n**Cuotas**: Fina entiende '12 cuotas', etc.",
+          examples: ['"Compré 85 en farmacia débito"', '"Notebook de 3000 en 12 cuotas crédito"']
+        },
+        {
+          title: "Saldo y Reportes",
+          icon: <Wallet className="w-5 h-5" />,
+          content: "Pregunta sobre tus gastos e ingresos en cualquier momento.",
+          examples: ['"¿Cuál es mi saldo?"', '"Resumen del mes de la empresa"']
+        }
+      ]
+    },
+    howItWorks: {
+      title: "Cómo Funciona",
+      steps: [
+        { title: "1. Guarda el Contacto", desc: "Añade el número de Fina a tu agenda.", icon: <Smartphone className="w-6 h-6 text-white" /> },
+        { title: "2. Inicia la Conversación", desc: "Envía un 'Hola' en WhatsApp.", icon: <Zap className="w-6 h-6 text-white" /> },
+        { title: "3. Habla Naturalmente", desc: "Habla como con un amigo: 'Gasté 50 en el almuerzo'.", icon: <MessageCircle className="w-6 h-6 text-white" /> }
+      ]
+    },
+    chat: {
+      title: "Prueba Fina ahora",
+      tabs: ["Gastos", "Ingresos", "Futuros", "Reportes"],
+      demoData: {
+        expense: [
+          { sender: 'user', text: 'Gasté 230 en el mercado', time: '10:42' },
+          { sender: 'agent', text: '✅ ¡Anotado! $ 230.00 en Mercado (Categoría: Alimentación) en cuenta Personal.', time: '10:42' },
+          { sender: 'user', text: 'Compré material de oficina 120 en la empresa', time: '14:15' },
+          { sender: 'agent', text: '🏢 ¡Listo! $ 120.00 registrados en la cuenta Negocio.', time: '14:15' }
+        ],
+        income: [
+           { sender: 'user', text: 'Recibí 3500 de salario', time: '09:00' },
+           { sender: 'agent', text: '💰 ¡Genial! Ingreso de $ 3,500.00 registrado.', time: '09:00' }
+        ],
+        future: [], report: []
+      }
+    },
+    pricing: {
+      title: "Planes accesibles en Dólares",
+      subtitle: "Organiza tu vida financiera hoy.",
+      monthly: "Mensual",
+      annual: "Anual (10% OFF)",
+      saveBadge: "Ahorra 10%",
+      currencySymbol: "$",
+      plans: [
+        { name: "Personal", price: 7.99, features: ["Cuenta Personal Ilimitada", "Tarjetas", "WhatsApp IA", "Soporte ES/PT/EN"] },
+        { name: "Pro & Pareja", price: 9.99, features: ["Todo de Personal", "Cuenta Negocio (PJ)", "Inversiones", "Acceso Compartido"], highlight: true }
+      ]
+    },
+    faq: {
+      title: "Preguntas Frecuentes",
+      items: [
+        { q: "¿Cómo separo personal de negocio?", a: "Usa palabras como 'empresa' o 'negocio' en la frase." },
+        { q: "¿Es seguro?", a: "Sí, encriptación de extremo a extremo." }
+      ]
+    }
+  },
+  en: {
+    nav: {
+      features: "Features",
+      howItWorks: "How it works",
+      pricing: "Pricing",
+      login: "Login",
+      cta: "Get Started"
+    },
+    hero: {
+      badge: "🚀 Financial Assistant on WhatsApp",
+      title: "Master your finances by chatting with Fina",
+      subtitle: "The AI that organizes your Personal and Business money directly on WhatsApp. No spreadsheets.",
+      ctaPrimary: "Try Free Now",
+      ctaSecondary: "View Plans",
+      disclaimer: "We don't ask for bank passwords. 100% Secure."
+    },
+    features: {
+      title: "Everything you need in one place",
+      subtitle: "From daily expense tracking to complex investments.",
+      items: [
+        { title: "Personal & Business", desc: "Default is Personal. Say 'business' or 'office' to log for your company.", icon: <Briefcase className="w-6 h-6 text-brand-600" /> },
+        { title: "Investments", desc: "Auto quotes for Stocks and Crypto in real-time.", icon: <TrendingUp className="w-6 h-6 text-brand-600" /> },
+        { title: "Cards", desc: "Control bills, limits and installments.", icon: <CreditCard className="w-6 h-6 text-brand-600" /> },
+        { title: "Shared Plan", desc: "Ideal for couples or partners.", icon: <Users className="w-6 h-6 text-brand-600" /> }
+      ]
+    },
+    guide: {
+      title: "Understand the Power of Fina",
+      subtitle: "Just talk naturally. See how easy it is:",
+      sections: [
+        {
+          title: "Personal vs Business",
+          icon: <Building2 className="w-5 h-5" />,
+          content: "Default is **Personal**.\nFor **Business**, use words like 'business', 'office', or 'company'.",
+          examples: ['"Spent 50 on lunch" (Personal)', '"Received 1200 consulting fee for business" (PJ)']
+        },
+        {
+          title: "Spent vs Must Pay",
+          icon: <CalendarClock className="w-5 h-5" />,
+          content: "**Spent**: Immediate transaction.\n**Must Pay**: Future scheduling.\n**Paid**: Confirm schedule.",
+          examples: ['"Spent 230 at market"', '"Must pay 1500 rent on the 10th"']
+        },
+        {
+          title: "Debit vs Credit",
+          icon: <CreditCard className="w-5 h-5" />,
+          content: "**Debit**: Deducts now.\n**Credit**: Goes to bill.\n**Installments**: Fina understands '12 installments', etc.",
+          examples: ['"Bought 85 pharmacy debit"', '"Laptop 3000 in 12 installments credit"']
+        },
+        {
+          title: "Balance & Reports",
+          icon: <Wallet className="w-5 h-5" />,
+          content: "Ask about expenses and income anytime.",
+          examples: ['"What is my balance?"', '"Business month report"']
+        }
+      ]
+    },
+    howItWorks: {
+      title: "How It Works",
+      steps: [
+        { title: "1. Save Contact", desc: "Add Fina's number to your phone.", icon: <Smartphone className="w-6 h-6 text-white" /> },
+        { title: "2. Start Chatting", desc: "Send a 'Hi' on WhatsApp.", icon: <Zap className="w-6 h-6 text-white" /> },
+        { title: "3. Talk Naturally", desc: "Just say: 'Spent 50 on lunch'.", icon: <MessageCircle className="w-6 h-6 text-white" /> }
+      ]
+    },
+    chat: {
+      title: "Try Fina now",
+      tabs: ["Expenses", "Income", "Future", "Reports"],
+      demoData: {
+        expense: [
+          { sender: 'user', text: 'Spent 230 at the market', time: '10:42' },
+          { sender: 'agent', text: '✅ Noted! $ 230.00 at Market (Category: Groceries) on Personal account.', time: '10:42' },
+          { sender: 'user', text: 'Bought office supplies 120 for business', time: '14:15' },
+          { sender: 'agent', text: '🏢 Done! $ 120.00 logged to Business account.', time: '14:15' }
+        ],
+        income: [], future: [], report: []
+      }
+    },
+    pricing: {
+      title: "Affordable Plans (USD)",
+      subtitle: "Start organizing your finances today.",
+      monthly: "Monthly",
+      annual: "Annual",
+      saveBadge: "Save 10%",
+      currencySymbol: "$",
+      plans: [
+        { name: "Personal", price: 7.99, features: ["Unlimited Personal Account", "Cards", "WhatsApp IA", "Multi-language Support"] },
+        { name: "Pro & Couple", price: 9.99, features: ["All Personal features", "Business Account", "Investments", "Shared Access"], highlight: true }
+      ]
+    },
+    faq: {
+      title: "FAQ",
+      items: [
+        { q: "Is it secure?", a: "Yes! End-to-end encryption." },
+      ]
+    }
+  }
+};
