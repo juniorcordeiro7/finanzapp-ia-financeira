@@ -155,7 +155,7 @@ function App() {
           {/* Fina with iPhone Image */}
           <div className="mt-16 flex justify-center">
             <img
-              src="/fina com iphone na mao.png"
+              src="/fina-iphone.png"
               alt="Fina - Assistente Financeira"
               className="max-w-md w-full h-auto rounded-2xl shadow-2xl"
             />
