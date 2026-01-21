@@ -1,9 +1,9 @@
 import React from 'react';
 import { Language } from './types';
-import { 
-  Briefcase, 
-  CreditCard, 
-  TrendingUp, 
+import {
+  Briefcase,
+  CreditCard,
+  TrendingUp,
   Users,
   Smartphone,
   ShieldCheck,
@@ -124,6 +124,13 @@ export const TRANSLATIONS: Record<Language, any> = {
     chat: {
       title: "Experimente a Fina",
       tabs: ["Despesas", "Receitas", "Futuros", "Relatórios"],
+      tipTitle: "💡 Dica da Fina",
+      tips: {
+        expense: "A Fina sabe a diferença entre 'Gastei' (Agora) e 'Tenho que pagar' (Futuro).",
+        income: "Separe receitas pessoais das empresariais dizendo 'na empresa'.",
+        future: "Agende IPTU ou faça assinaturas recorrentes como 'Netflix mensal'.",
+        report: "Peça relatórios específicos como 'Quanto gastei com Uber este mês?'"
+      },
       demoData: {
         expense: [
           { sender: 'user', text: 'Gastei 230 no mercado', time: '10:42' },
@@ -140,10 +147,10 @@ export const TRANSLATIONS: Record<Language, any> = {
           { sender: 'agent', text: '🏢 Receita PJ de R$ 800,00 registrada!', time: '11:20' }
         ],
         future: [
-           { sender: 'user', text: 'Tenho IPTU de 70 reais vence dia 10/01/2026 e são 3 parcelas', time: '19:00' },
-           { sender: 'agent', text: '🗓️ Agendado! 3 parcelas de R$ 70,00 para IPTU.\n1ª vence em 10/01/2026.', time: '19:00' },
-           { sender: 'user', text: 'Tenho Netflix mensal recorrente de 29,90', time: '19:05' },
-           { sender: 'agent', text: '🔄 Assinatura Netflix de R$ 29,90 configurada como recorrente mensal.', time: '19:05' }
+          { sender: 'user', text: 'Tenho IPTU de 70 reais vence dia 10/01/2026 e são 3 parcelas', time: '19:00' },
+          { sender: 'agent', text: '🗓️ Agendado! 3 parcelas de R$ 70,00 para IPTU.\n1ª vence em 10/01/2026.', time: '19:00' },
+          { sender: 'user', text: 'Tenho Netflix mensal recorrente de 29,90', time: '19:05' },
+          { sender: 'agent', text: '🔄 Assinatura Netflix de R$ 29,90 configurada como recorrente mensal.', time: '19:05' }
         ],
         report: [
           { sender: 'user', text: 'Qual a fatura atual do cartão Nubank?', time: '08:00' },
@@ -182,6 +189,23 @@ export const TRANSLATIONS: Record<Language, any> = {
         { q: "Posso cancelar quando quiser?", a: "Sim, sem fidelidade no plano mensal. Cancele a qualquer momento direto pelo app." },
         { q: "É seguro?", a: "Sim. Usamos criptografia de ponta a ponta e não solicitamos sua senha bancária para realizar transações, apenas registramos o que você nos conta." }
       ]
+    },
+    footer: {
+      description: "Sua assistente financeira Pessoal e PJ. Controle gastos, investimentos e cartões com a simplicidade de uma conversa no WhatsApp.",
+      product: "Produto",
+      features: "Funcionalidades",
+      plans: "Planos",
+      login: "Login",
+      legal: "Legal",
+      terms: "Termos de Uso",
+      privacy: "Privacidade",
+      contact: "Contato",
+      contactInfo: "Contato",
+      address: "Av. Bernardino Caballero, San Alberto, Alto Paraná, Paraguay",
+      phone: "+595982690952",
+      email: "contacto@finanzapp.lat",
+      instagram: "@finanzapp.latam",
+      rights: "Todos os direitos reservados."
     }
   },
   es: {
@@ -251,6 +275,13 @@ export const TRANSLATIONS: Record<Language, any> = {
     chat: {
       title: "Prueba Fina ahora",
       tabs: ["Gastos", "Ingresos", "Futuros", "Reportes"],
+      tipTitle: "💡 Consejo de Fina",
+      tips: {
+        expense: "Fina sabe la diferencia entre 'Gasté' (Ahora) y 'Tengo que pagar' (Futuro).",
+        income: "Separa ingresos personales de los empresariales diciendo 'en la empresa'.",
+        future: "Agenda impuestos o haz suscripciones recurrentes como 'Netflix mensual'.",
+        report: "Pide reportes específicos como '¿Cuánto gasté en Uber este mes?'"
+      },
       demoData: {
         expense: [
           { sender: 'user', text: 'Gasté 230 en el mercado', time: '10:42' },
@@ -259,8 +290,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           { sender: 'agent', text: '🏢 ¡Listo! $ 120.00 registrados en la cuenta Negocio.', time: '14:15' }
         ],
         income: [
-           { sender: 'user', text: 'Recibí 3500 de salario', time: '09:00' },
-           { sender: 'agent', text: '💰 ¡Genial! Ingreso de $ 3,500.00 registrado.', time: '09:00' }
+          { sender: 'user', text: 'Recibí 3500 de salario', time: '09:00' },
+          { sender: 'agent', text: '💰 ¡Genial! Ingreso de $ 3,500.00 registrado.', time: '09:00' }
         ],
         future: [], report: []
       }
@@ -283,6 +314,23 @@ export const TRANSLATIONS: Record<Language, any> = {
         { q: "¿Cómo separo personal de negocio?", a: "Usa palabras como 'empresa' o 'negocio' en la frase." },
         { q: "¿Es seguro?", a: "Sí, encriptación de extremo a extremo." }
       ]
+    },
+    footer: {
+      description: "Tu asistente financiera Personal y Empresarial. Controla gastos, inversiones y tarjetas con la simplicidad de una conversación en WhatsApp.",
+      product: "Producto",
+      features: "Funciones",
+      plans: "Planes",
+      login: "Entrar",
+      legal: "Legal",
+      terms: "Términos de Uso",
+      privacy: "Privacidad",
+      contact: "Contacto",
+      contactInfo: "Contacto",
+      address: "Av. Bernardino Caballero, San Alberto, Alto Paraná, Paraguay",
+      phone: "+595982690952",
+      email: "contacto@finanzapp.lat",
+      instagram: "@finanzapp.latam",
+      rights: "Todos los derechos reservados."
     }
   },
   en: {
@@ -352,6 +400,13 @@ export const TRANSLATIONS: Record<Language, any> = {
     chat: {
       title: "Try Fina now",
       tabs: ["Expenses", "Income", "Future", "Reports"],
+      tipTitle: "💡 Fina's Tip",
+      tips: {
+        expense: "Fina knows the difference between 'Spent' (Now) and 'Must pay' (Future).",
+        income: "Separate personal income from business by saying 'for business'.",
+        future: "Schedule taxes or set up recurring subscriptions like 'Netflix monthly'.",
+        report: "Ask for specific reports like 'How much did I spend on Uber this month?'"
+      },
       demoData: {
         expense: [
           { sender: 'user', text: 'Spent 230 at the market', time: '10:42' },
@@ -379,6 +434,23 @@ export const TRANSLATIONS: Record<Language, any> = {
       items: [
         { q: "Is it secure?", a: "Yes! End-to-end encryption." },
       ]
+    },
+    footer: {
+      description: "Your Personal and Business financial assistant. Control expenses, investments and cards with the simplicity of a WhatsApp conversation.",
+      product: "Product",
+      features: "Features",
+      plans: "Pricing",
+      login: "Login",
+      legal: "Legal",
+      terms: "Terms of Use",
+      privacy: "Privacy",
+      contact: "Contact",
+      contactInfo: "Contact",
+      address: "Av. Bernardino Caballero, San Alberto, Alto Paraná, Paraguay",
+      phone: "+595982690952",
+      email: "contacto@finanzapp.lat",
+      instagram: "@finanzapp.latam",
+      rights: "All rights reserved."
     }
   }
 };

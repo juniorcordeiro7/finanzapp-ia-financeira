@@ -3,8 +3,8 @@ import { TRANSLATIONS } from './constants';
 import { Language } from './types';
 import { Button } from './components/Button';
 import { ChatDemo } from './components/ChatDemo';
-import { 
-  Menu, X, Globe, Check, Star, Shield, ArrowRight 
+import {
+  Menu, X, Globe, Check, Star, Shield, ArrowRight
 } from 'lucide-react';
 
 function App() {
@@ -31,8 +31,8 @@ function App() {
   const Logo = () => (
     <div className="flex items-center gap-2 select-none">
       <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="45" stroke="#1f2937" strokeWidth="10"/>
-        <circle cx="50" cy="50" r="18" fill="#16a34a"/>
+        <circle cx="50" cy="50" r="45" stroke="#1f2937" strokeWidth="10" />
+        <circle cx="50" cy="50" r="18" fill="#16a34a" />
       </svg>
       <span className="text-2xl font-bold text-slate-900 tracking-tight">
         Finanz<span className="text-[#16a34a]">App</span>
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50">
-      
+
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +57,7 @@ function App() {
               <button onClick={() => scrollToSection('features')} className="text-slate-600 hover:text-brand-600 font-medium transition-colors">{t.nav.features}</button>
               <button onClick={() => scrollToSection('how-it-works')} className="text-slate-600 hover:text-brand-600 font-medium transition-colors">{t.nav.howItWorks}</button>
               <button onClick={() => scrollToSection('pricing')} className="text-slate-600 hover:text-brand-600 font-medium transition-colors">{t.nav.pricing}</button>
-              
+
               <div className="flex items-center gap-4 border-l pl-6 border-slate-200">
                 <div className="relative group py-2">
                   <button className="flex items-center gap-1 text-slate-500 hover:text-slate-900">
@@ -70,15 +70,15 @@ function App() {
                     <button onClick={() => toggleLang('en')} className="w-full text-left px-3 py-2 text-sm hover:bg-slate-50 rounded font-medium">English</button>
                   </div>
                 </div>
-                
-                <a 
-                  href="https://app.finanzapp.lat/" 
+
+                <a
+                  href="https://app.finanzapp.lat/"
                   className="text-slate-600 hover:text-slate-900 font-semibold text-sm px-2"
                 >
                   {t.nav.login}
                 </a>
-                <Button 
-                  variant="primary" 
+                <Button
+                  variant="primary"
                   size="sm"
                   onClick={() => scrollToSection('pricing')}
                 >
@@ -100,18 +100,18 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-slate-100 absolute w-full pb-6 shadow-lg animate-in slide-in-from-top-2">
             <div className="px-4 pt-4 pb-2 space-y-3">
-              <button onClick={() => {scrollToSection('features'); setIsMenuOpen(false)}} className="block w-full text-left px-3 py-2 text-slate-700 font-medium">{t.nav.features}</button>
-              <button onClick={() => {scrollToSection('how-it-works'); setIsMenuOpen(false)}} className="block w-full text-left px-3 py-2 text-slate-700 font-medium">{t.nav.howItWorks}</button>
-              <button onClick={() => {scrollToSection('pricing'); setIsMenuOpen(false)}} className="block w-full text-left px-3 py-2 text-slate-700 font-medium">{t.nav.pricing}</button>
+              <button onClick={() => { scrollToSection('features'); setIsMenuOpen(false) }} className="block w-full text-left px-3 py-2 text-slate-700 font-medium">{t.nav.features}</button>
+              <button onClick={() => { scrollToSection('how-it-works'); setIsMenuOpen(false) }} className="block w-full text-left px-3 py-2 text-slate-700 font-medium">{t.nav.howItWorks}</button>
+              <button onClick={() => { scrollToSection('pricing'); setIsMenuOpen(false) }} className="block w-full text-left px-3 py-2 text-slate-700 font-medium">{t.nav.pricing}</button>
               <a onClick={() => setIsMenuOpen(false)} href="https://app.finanzapp.lat/" className="block px-3 py-2 text-slate-700 font-medium">{t.nav.login}</a>
-              
+
               <div className="flex gap-4 px-3 pt-4 border-t border-slate-100">
                 <button onClick={() => toggleLang('pt')} className={`text-sm font-bold ${lang === 'pt' ? 'text-brand-600' : 'text-slate-400'}`}>PT</button>
                 <button onClick={() => toggleLang('es')} className={`text-sm font-bold ${lang === 'es' ? 'text-brand-600' : 'text-slate-400'}`}>ES</button>
                 <button onClick={() => toggleLang('en')} className={`text-sm font-bold ${lang === 'en' ? 'text-brand-600' : 'text-slate-400'}`}>EN</button>
               </div>
               <div className="px-3 pt-4">
-                <Button className="w-full" onClick={() => {scrollToSection('pricing'); setIsMenuOpen(false)}}>
+                <Button className="w-full" onClick={() => { scrollToSection('pricing'); setIsMenuOpen(false) }}>
                   {t.nav.cta}
                 </Button>
               </div>
@@ -166,12 +166,12 @@ function App() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">{t.features.title}</h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">{t.features.subtitle}</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.features.items.map((item: any, idx: number) => (
               <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group">
                 <div className="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                   {item.icon}
+                  {item.icon}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
                 <p className="text-slate-600 leading-relaxed text-sm">
@@ -189,7 +189,7 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t.howItWorks.title}</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 relative">
             {/* Connecting Line (Desktop) */}
             <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-1 bg-gradient-to-r from-brand-200 via-brand-400 to-brand-200 z-0"></div>
@@ -211,7 +211,7 @@ function App() {
       <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-500/20 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.guide.title}</h2>
@@ -249,13 +249,13 @@ function App() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{t.pricing.title}</h2>
             <p className="text-slate-500 mb-8">{t.pricing.subtitle}</p>
-            
+
             {/* Toggle Switch */}
             <div className="flex items-center justify-center gap-4 bg-white p-2 rounded-full shadow-sm inline-flex border border-slate-100">
               <span className={`text-sm font-semibold px-4 cursor-pointer ${!isAnnual ? 'text-brand-600' : 'text-slate-500'}`} onClick={() => setIsAnnual(false)}>
                 {t.pricing.monthly}
               </span>
-              <button 
+              <button
                 onClick={() => setIsAnnual(!isAnnual)}
                 className="relative w-14 h-7 bg-slate-200 rounded-full transition-colors duration-300 focus:outline-none"
               >
@@ -279,17 +279,16 @@ function App() {
               // Annual Calculation: Price * 12 * 0.90
               const annualTotal = (basePrice * 12 * 0.90);
               const monthlyEquivalentIfAnnual = (annualTotal / 12).toFixed(2);
-              
-              const displayPrice = isAnnual 
+
+              const displayPrice = isAnnual
                 ? monthlyEquivalentIfAnnual
                 : basePrice.toFixed(2);
-              
+
               return (
-                <div key={idx} className={`relative p-8 rounded-3xl border-2 transition-all duration-300 flex flex-col ${
-                  plan.highlight 
-                    ? 'border-brand-500 bg-white shadow-2xl scale-100 md:scale-105 z-10' 
+                <div key={idx} className={`relative p-8 rounded-3xl border-2 transition-all duration-300 flex flex-col ${plan.highlight
+                    ? 'border-brand-500 bg-white shadow-2xl scale-100 md:scale-105 z-10'
                     : 'border-slate-200 bg-white hover:border-brand-200'
-                }`}>
+                  }`}>
                   {plan.highlight && (
                     <div className="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-xl uppercase tracking-wider shadow-sm">
                       Mais Popular
@@ -300,15 +299,15 @@ function App() {
                     <span className="text-5xl font-extrabold text-slate-900 tracking-tight">{currency}{displayPrice}</span>
                     <span className="text-slate-500 font-medium">/mês</span>
                   </div>
-                  
+
                   <div className="h-6 mb-6">
-                  {isAnnual && (
-                    <p className="text-xs text-brand-700 font-semibold bg-brand-50 inline-block px-2 py-1 rounded">
-                      Cobrado {currency}{annualTotal.toFixed(2)} anualmente
-                    </p>
-                  )}
+                    {isAnnual && (
+                      <p className="text-xs text-brand-700 font-semibold bg-brand-50 inline-block px-2 py-1 rounded">
+                        Cobrado {currency}{annualTotal.toFixed(2)} anualmente
+                      </p>
+                    )}
                   </div>
-                  
+
                   <ul className="space-y-4 mb-8 flex-1">
                     {plan.features.map((feat: string, fIdx: number) => (
                       <li key={fIdx} className="flex items-start gap-3 text-slate-600 text-sm">
@@ -320,8 +319,8 @@ function App() {
                     ))}
                   </ul>
 
-                  <Button 
-                    variant={plan.highlight ? 'primary' : 'outline'} 
+                  <Button
+                    variant={plan.highlight ? 'primary' : 'outline'}
                     className="w-full"
                     onClick={() => window.location.href = 'https://app.finanzapp.lat/cadastro'}
                   >
@@ -357,36 +356,55 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-               {/* Footer Logo - White version */}
-               <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="white" strokeWidth="10"/>
-                <circle cx="50" cy="50" r="18" fill="white"/>
+              {/* Footer Logo - White version */}
+              <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" stroke="white" strokeWidth="10" />
+                <circle cx="50" cy="50" r="18" fill="white" />
               </svg>
               <span className="text-xl font-bold text-white tracking-tight">FinanzApp</span>
             </div>
-            <p className="text-sm max-w-sm leading-relaxed">
-              Sua assistente financeira Pessoal e PJ. Controle gastos, investimentos e cartões com a simplicidade de uma conversa no WhatsApp.
+            <p className="text-sm max-w-sm leading-relaxed mb-6">
+              {t.footer.description}
             </p>
+            <div className="space-y-2 text-sm">
+              <h4 className="text-white font-bold mb-3 uppercase text-sm tracking-wider">{t.footer.contactInfo}</h4>
+              <p className="flex items-start gap-2">
+                <span className="text-brand-400">📍</span>
+                <span>{t.footer.address}</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="text-brand-400">📞</span>
+                <a href={`tel:${t.footer.phone}`} className="hover:text-brand-400 transition-colors">{t.footer.phone}</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="text-brand-400">✉️</span>
+                <a href={`mailto:${t.footer.email}`} className="hover:text-brand-400 transition-colors">{t.footer.email}</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="text-brand-400">📸</span>
+                <a href={`https://instagram.com/${t.footer.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-brand-400 transition-colors">{t.footer.instagram}</a>
+              </p>
+            </div>
           </div>
           <div>
-            <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Produto</h4>
+            <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">{t.footer.product}</h4>
             <ul className="space-y-2 text-sm">
-              <li><button onClick={() => scrollToSection('features')} className="hover:text-brand-400 transition-colors">Funcionalidades</button></li>
-              <li><button onClick={() => scrollToSection('pricing')} className="hover:text-brand-400 transition-colors">Planos</button></li>
-              <li><a href="https://app.finanzapp.lat/" className="hover:text-brand-400 transition-colors">Login</a></li>
+              <li><button onClick={() => scrollToSection('features')} className="hover:text-brand-400 transition-colors">{t.footer.features}</button></li>
+              <li><button onClick={() => scrollToSection('pricing')} className="hover:text-brand-400 transition-colors">{t.footer.plans}</button></li>
+              <li><a href="https://app.finanzapp.lat/" className="hover:text-brand-400 transition-colors">{t.footer.login}</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
+            <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">{t.footer.legal}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Termos de Uso</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Privacidade</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Contato</a></li>
+              <li><a href="#" className="hover:text-brand-400 transition-colors">{t.footer.terms}</a></li>
+              <li><a href="#" className="hover:text-brand-400 transition-colors">{t.footer.privacy}</a></li>
+              <li><a href="#" className="hover:text-brand-400 transition-colors">{t.footer.contact}</a></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-600">
-          © {new Date().getFullYear()} FinanzApp. Todos os direitos reservados.
+          © {new Date().getFullYear()} FinanzApp. {t.footer.rights}
         </div>
       </footer>
     </div>
