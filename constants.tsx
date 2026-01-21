@@ -173,7 +173,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       startNow: "Começar Agora",
       plans: [
         {
-          name: "Start",
+          name: "Starter",
           description: "Pra quem quer organizar a vida financeira sem dor de cabeça.",
           price: 5.99,
           annualPrice: 61.10,
@@ -330,7 +330,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       startNow: "Empezar Ahora",
       plans: [
         {
-          name: "Start",
+          name: "Starter",
           description: "Para quien quiere organizar su vida financiera sin complicaciones.",
           price: 5.99,
           annualPrice: 61.10,
@@ -481,7 +481,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       startNow: "Start Now",
       plans: [
         {
-          name: "Start",
+          name: "Starter",
           description: "For those who want to organize their financial life without hassle.",
           price: 5.99,
           annualPrice: 61.10,
