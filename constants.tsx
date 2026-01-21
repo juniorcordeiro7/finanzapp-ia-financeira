@@ -179,6 +179,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           annualPrice: 61.10,
           discount: 15,
           colorScheme: "white",
+          monthlyLink: "https://payfast.greenn.com.br/155022",
+          annualLink: "https://payfast.greenn.com.br/155015",
           features: ["Sistema web com gráficos interativos", "Controle de gastos via WhatsApp por texto, áudio e imagem", "Transações ilimitadas via WhatsApp", "Categorias e subcategorias personalizadas", "Gestão individual e personalização de perfil", "Lembretes de contas a pagar e receber pelo WhatsApp", "Metas financeiras", "Controle de cartão de crédito", "Gestão de investimentos", "Pagamentos programados", "Relatórios completos", "Exportação de dados", "Suporte via WhatsApp"]
         },
         {
@@ -189,6 +191,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           discount: 15,
           colorScheme: "green",
           highlight: true,
+          monthlyLink: "https://payfast.greenn.com.br/155016",
+          annualLink: "https://payfast.greenn.com.br/155018",
           features: ["Tudo do plano Start", "Gestão compartilhada", "Cada membro usa seu próprio número de WhatsApp", "Alertas individuais de contas a pagar e receber", "Visualização centralizada, sempre atualizada e visível para todos", "1 usuário extra incluso sem custo adicional", "Metas, cartões, investimentos, pagamentos programados e relatórios para todos os usuários", "Exportação de dados", "Ideal para casais, famílias ou sócios"]
         },
         {
@@ -198,6 +202,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           annualPrice: 107.90,
           discount: 10,
           colorScheme: "blue",
+          monthlyLink: "https://payfast.greenn.com.br/155019",
+          annualLink: "https://payfast.greenn.com.br/155020",
           features: ["Tudo dos planos anteriores", "Conta PJ", "Gestão financeira para microempreendedores", "Metas financeiras pessoais e do negócio", "Controle de cartões e investimentos da empresa", "Pagamentos programados para despesas fixas", "Relatórios completos para tomada de decisão", "Suporte humanizado pelo WhatsApp", "Suporte por ligação", "Exportação de dados", "Lembretes de contas a pagar e receber pelo WhatsApp"]
         }
       ]
@@ -336,6 +342,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           annualPrice: 61.10,
           discount: 15,
           colorScheme: "white",
+          monthlyLink: "https://payfast.greenn.com.br/155022",
+          annualLink: "https://payfast.greenn.com.br/155015",
           features: ["Sistema web con gráficos interactivos", "Control de gastos vía WhatsApp por texto, audio e imagen", "Transacciones ilimitadas vía WhatsApp", "Categorías y subcategorías personalizadas", "Gestión individual y personalización de perfil", "Recordatorios de cuentas a pagar y recibir por WhatsApp", "Metas financieras", "Control de tarjeta de crédito", "Gestión de inversiones", "Pagos programados", "Informes completos", "Exportación de datos", "Soporte vía WhatsApp"]
         },
         {
@@ -355,6 +363,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           annualPrice: 107.90,
           discount: 10,
           colorScheme: "blue",
+          monthlyLink: "https://payfast.greenn.com.br/155019",
+          annualLink: "https://payfast.greenn.com.br/155020",
           features: ["Todo de los planes anteriores", "Cuenta Negocio", "Gestión financiera para microemprendedores", "Metas financieras personales y del negocio", "Control de tarjetas e inversiones de la empresa", "Pagos programados para gastos fijos", "Informes completos para toma de decisiones", "Soporte humanizado por WhatsApp", "Soporte por llamada", "Exportación de datos", "Recordatorios de cuentas a pagar y recibir por WhatsApp"]
         }
       ]
@@ -487,6 +497,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           annualPrice: 61.10,
           discount: 15,
           colorScheme: "white",
+          monthlyLink: "https://payfast.greenn.com.br/155022",
+          annualLink: "https://payfast.greenn.com.br/155015",
           features: ["Web system with interactive charts", "Expense control via WhatsApp by text, audio and image", "Unlimited transactions via WhatsApp", "Customized categories and subcategories", "Individual management and profile customization", "Reminders of bills to pay and receive via WhatsApp", "Financial goals", "Credit card control", "Investment management", "Scheduled payments", "Complete reports", "Data export", "Support via WhatsApp"]
         },
         {
@@ -497,6 +509,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           discount: 15,
           colorScheme: "green",
           highlight: true,
+          monthlyLink: "https://payfast.greenn.com.br/155016",
+          annualLink: "https://payfast.greenn.com.br/155018",
           features: ["Everything from Start plan", "Shared management", "Each member uses their own WhatsApp number", "Individual alerts for bills to pay and receive", "Centralized view, always updated and visible to all", "1 extra user included at no additional cost", "Goals, cards, investments, scheduled payments and reports for all users", "Data export", "Ideal for couples, families or partners"]
         },
         {
@@ -506,6 +520,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           annualPrice: 107.90,
           discount: 10,
           colorScheme: "blue",
+          monthlyLink: "https://payfast.greenn.com.br/155019",
+          annualLink: "https://payfast.greenn.com.br/155020",
           features: ["Everything from previous plans", "Business Account", "Financial management for micro-entrepreneurs", "Personal and business financial goals", "Company card and investment control", "Scheduled payments for fixed expenses", "Complete reports for decision making", "Humanized support via WhatsApp", "Phone support", "Data export", "Reminders of bills to pay and receive via WhatsApp"]
         }
       ]

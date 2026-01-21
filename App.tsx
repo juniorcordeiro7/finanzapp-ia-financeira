@@ -328,7 +328,10 @@ function App() {
                   <Button
                     variant={plan.highlight ? 'primary' : 'outline'}
                     className="w-full"
-                    onClick={() => window.location.href = 'https://app.finanzapp.lat/cadastro'}
+                    onClick={() => {
+                      const link = isAnnual ? plan.annualLink : plan.monthlyLink;
+                      window.location.href = link || 'https://app.finanzapp.lat/cadastro';
+                    }}
                   >
                     {t.pricing.startNow}
                   </Button>
