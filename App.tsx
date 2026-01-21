@@ -151,6 +151,15 @@ function App() {
             <Shield className="w-4 h-4 text-green-600" />
             {t.hero.disclaimer}
           </p>
+
+          {/* Fina with iPhone Image */}
+          <div className="mt-16 flex justify-center">
+            <img
+              src="/fina com iphone na mao.png"
+              alt="Fina - Assistente Financeira"
+              className="max-w-md w-full h-auto rounded-2xl shadow-2xl"
+            />
+          </div>
         </div>
       </section>
 
@@ -264,46 +273,43 @@ function App() {
               <span className={`text-sm font-semibold px-4 cursor-pointer flex items-center gap-2 ${isAnnual ? 'text-brand-600' : 'text-slate-500'}`} onClick={() => setIsAnnual(true)}>
                 {t.pricing.annual}
                 <span className="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wide">
-                  -10%
+                  -15%
                 </span>
               </span>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {t.pricing.plans.map((plan: any, idx: number) => {
               // Calculate price based on toggle
-              const basePrice = plan.price;
               const currency = t.pricing.currencySymbol;
+              const monthlyPrice = plan.price;
+              const annualPrice = plan.annualPrice;
+              const monthlyEquivalent = (annualPrice / 12).toFixed(2);
 
-              // Annual Calculation: Price * 12 * 0.90
-              const annualTotal = (basePrice * 12 * 0.90);
-              const monthlyEquivalentIfAnnual = (annualTotal / 12).toFixed(2);
-
-              const displayPrice = isAnnual
-                ? monthlyEquivalentIfAnnual
-                : basePrice.toFixed(2);
+              const displayPrice = isAnnual ? monthlyEquivalent : monthlyPrice.toFixed(2);
 
               return (
                 <div key={idx} className={`relative p-8 rounded-3xl border-2 transition-all duration-300 flex flex-col ${plan.highlight
-                    ? 'border-brand-500 bg-white shadow-2xl scale-100 md:scale-105 z-10'
-                    : 'border-slate-200 bg-white hover:border-brand-200'
+                  ? 'border-brand-500 bg-white shadow-2xl scale-100 md:scale-105 z-10'
+                  : 'border-slate-200 bg-white hover:border-brand-200'
                   }`}>
                   {plan.highlight && (
                     <div className="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-xl uppercase tracking-wider shadow-sm">
-                      Mais Popular
+                      {t.pricing.mostPopular}
                     </div>
                   )}
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</h3>
+                  <p className="text-sm text-slate-600 mb-4 min-h-[40px]">{plan.description}</p>
                   <div className="flex items-baseline gap-1 mb-2">
                     <span className="text-5xl font-extrabold text-slate-900 tracking-tight">{currency}{displayPrice}</span>
-                    <span className="text-slate-500 font-medium">/mês</span>
+                    <span className="text-slate-500 font-medium">{t.pricing.perMonth}</span>
                   </div>
 
                   <div className="h-6 mb-6">
                     {isAnnual && (
                       <p className="text-xs text-brand-700 font-semibold bg-brand-50 inline-block px-2 py-1 rounded">
-                        Cobrado {currency}{annualTotal.toFixed(2)} anualmente
+                        {t.pricing.chargedAnnually} {currency}{annualPrice.toFixed(2)} {t.pricing.annually}
                       </p>
                     )}
                   </div>
@@ -324,7 +330,7 @@ function App() {
                     className="w-full"
                     onClick={() => window.location.href = 'https://app.finanzapp.lat/cadastro'}
                   >
-                    {plan.highlight ? t.nav.cta : 'Começar Agora'}
+                    {t.pricing.startNow}
                   </Button>
                 </div>
               );

@@ -162,7 +162,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     },
     pricing: {
       title: "Planos acessíveis em Dólares",
-      subtitle: "Organiza tu vida financeira hoy.",
+      subtitle: "Comece a organizar sua vida financeira hoje.",
       monthly: "Mensal",
       annual: "Anual",
       currencySymbol: "$",
@@ -319,7 +319,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     },
     pricing: {
       title: "Planes accesibles en Dólares",
-      subtitle: "Comece a organizar sua vida financeira hoje.",
+      subtitle: "Organiza tu vida financiera hoy.",
       monthly: "Mensual",
       annual: "Anual",
       currencySymbol: "$",
