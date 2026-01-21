@@ -30,7 +30,7 @@ export const ChatDemo: React.FC<ChatDemoProps> = ({ lang }) => {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`p-4 rounded-xl text-left border transition-all duration-300 ${activeTab === tab
-                ? 'border-brand-500 bg-brand-50 shadow-md ring-1 ring-brand-500'
+                ? (idx === 0 ? 'border-red-500 bg-red-50 shadow-md ring-1 ring-red-500' : 'border-brand-500 bg-brand-50 shadow-md ring-1 ring-brand-500')
                 : 'border-slate-200 bg-white hover:border-brand-200 hover:bg-slate-50'
                 }`}
             >

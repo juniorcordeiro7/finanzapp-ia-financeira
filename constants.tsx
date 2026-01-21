@@ -161,23 +161,44 @@ export const TRANSLATIONS: Record<Language, any> = {
       }
     },
     pricing: {
-      title: "Planos acessíveis em Dólar",
-      subtitle: "Comece a organizar sua vida financeira hoje.",
+      title: "Planos acessíveis em Dólares",
+      subtitle: "Organiza tu vida financeira hoy.",
       monthly: "Mensal",
-      annual: "Anual (10% OFF)",
-      saveBadge: "Economize 10%",
+      annual: "Anual",
       currencySymbol: "$",
+      perMonth: "/mês",
+      chargedAnnually: "Cobrado",
+      annually: "anualmente",
+      mostPopular: "Mais Popular",
+      startNow: "Começar Agora",
       plans: [
         {
-          name: "Pessoal",
-          price: 7.99,
-          features: ["Conta Pessoal Ilimitada", "Gestão de Cartões e Contas", "IA no WhatsApp 24/7", "Categorização Automática", "Suporte PT/ES/EN"]
+          name: "Start",
+          description: "Pra quem quer organizar a vida financeira sem dor de cabeça.",
+          price: 5.99,
+          annualPrice: 61.10,
+          discount: 15,
+          colorScheme: "white",
+          features: ["Sistema web com gráficos interativos", "Controle de gastos via WhatsApp por texto, áudio e imagem", "Transações ilimitadas via WhatsApp", "Categorias e subcategorias personalizadas", "Gestão individual e personalização de perfil", "Lembretes de contas a pagar e receber pelo WhatsApp", "Metas financeiras", "Controle de cartão de crédito", "Gestão de investimentos", "Pagamentos programados", "Relatórios completos", "Exportação de dados", "Suporte via WhatsApp"]
         },
         {
-          name: "Pro & Casal",
+          name: "Plus",
+          description: "Pra quem divide contas e decisões financeiras.",
+          price: 7.99,
+          annualPrice: 81.50,
+          discount: 15,
+          colorScheme: "green",
+          highlight: true,
+          features: ["Tudo do plano Start", "Gestão compartilhada", "Cada membro usa seu próprio número de WhatsApp", "Alertas individuais de contas a pagar e receber", "Visualização centralizada, sempre atualizada e visível para todos", "1 usuário extra incluso sem custo adicional", "Metas, cartões, investimentos, pagamentos programados e relatórios para todos os usuários", "Exportação de dados", "Ideal para casais, famílias ou sócios"]
+        },
+        {
+          name: "Pro",
+          description: "Pra quem empreende e precisa separar o pessoal do profissional.",
           price: 9.99,
-          features: ["Tudo do plano Pessoal", "Conta PJ / Empresarial", "Investimentos (Ações/Cripto/FIIs)", "Acesso Compartilhado (Sócio/Cônjuge)", "Relatórios Avançados"],
-          highlight: true
+          annualPrice: 107.90,
+          discount: 10,
+          colorScheme: "blue",
+          features: ["Tudo dos planos anteriores", "Conta PJ", "Gestão financeira para microempreendedores", "Metas financeiras pessoais e do negócio", "Controle de cartões e investimentos da empresa", "Pagamentos programados para despesas fixas", "Relatórios completos para tomada de decisão", "Suporte humanizado pelo WhatsApp", "Suporte por ligação", "Exportação de dados", "Lembretes de contas a pagar e receber pelo WhatsApp"]
         }
       ]
     },
@@ -275,7 +296,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     chat: {
       title: "Prueba Fina ahora",
       tabs: ["Gastos", "Ingresos", "Futuros", "Reportes"],
-      tipTitle: "💡 Consejo de Fina",
+      tipTitle: "💡 Tip de Fina",
       tips: {
         expense: "Fina sabe la diferencia entre 'Gasté' (Ahora) y 'Tengo que pagar' (Futuro).",
         income: "Separa ingresos personales de los empresariales diciendo 'en la empresa'.",
@@ -298,14 +319,44 @@ export const TRANSLATIONS: Record<Language, any> = {
     },
     pricing: {
       title: "Planes accesibles en Dólares",
-      subtitle: "Organiza tu vida financiera hoy.",
+      subtitle: "Comece a organizar sua vida financeira hoje.",
       monthly: "Mensual",
-      annual: "Anual (10% OFF)",
-      saveBadge: "Ahorra 10%",
+      annual: "Anual",
       currencySymbol: "$",
+      perMonth: "/mes",
+      chargedAnnually: "Cobrado",
+      annually: "anualmente",
+      mostPopular: "Más Popular",
+      startNow: "Empezar Ahora",
       plans: [
-        { name: "Personal", price: 7.99, features: ["Cuenta Personal Ilimitada", "Tarjetas", "WhatsApp IA", "Soporte ES/PT/EN"] },
-        { name: "Pro & Pareja", price: 9.99, features: ["Todo de Personal", "Cuenta Negocio (PJ)", "Inversiones", "Acceso Compartido"], highlight: true }
+        {
+          name: "Start",
+          description: "Para quien quiere organizar su vida financiera sin complicaciones.",
+          price: 5.99,
+          annualPrice: 61.10,
+          discount: 15,
+          colorScheme: "white",
+          features: ["Sistema web con gráficos interactivos", "Control de gastos vía WhatsApp por texto, audio e imagen", "Transacciones ilimitadas vía WhatsApp", "Categorías y subcategorías personalizadas", "Gestión individual y personalización de perfil", "Recordatorios de cuentas a pagar y recibir por WhatsApp", "Metas financieras", "Control de tarjeta de crédito", "Gestión de inversiones", "Pagos programados", "Informes completos", "Exportación de datos", "Soporte vía WhatsApp"]
+        },
+        {
+          name: "Plus",
+          description: "Para quien comparte cuentas y decisiones financieras.",
+          price: 7.99,
+          annualPrice: 81.50,
+          discount: 15,
+          colorScheme: "green",
+          highlight: true,
+          features: ["Todo del plan Start", "Gestión compartida", "Cada miembro usa su propio número de WhatsApp", "Alertas individuales de cuentas a pagar y recibir", "Visualización centralizada, siempre actualizada y visible para todos", "1 usuario extra incluido sin costo adicional", "Metas, tarjetas, inversiones, pagos programados e informes para todos los usuarios", "Exportación de datos", "Ideal para parejas, familias o socios"]
+        },
+        {
+          name: "Pro",
+          description: "Para quien emprende y necesita separar lo personal de lo profesional.",
+          price: 9.99,
+          annualPrice: 107.90,
+          discount: 10,
+          colorScheme: "blue",
+          features: ["Todo de los planes anteriores", "Cuenta Negocio", "Gestión financiera para microemprendedores", "Metas financieras personales y del negocio", "Control de tarjetas e inversiones de la empresa", "Pagos programados para gastos fijos", "Informes completos para toma de decisiones", "Soporte humanizado por WhatsApp", "Soporte por llamada", "Exportación de datos", "Recordatorios de cuentas a pagar y recibir por WhatsApp"]
+        }
       ]
     },
     faq: {
@@ -422,11 +473,41 @@ export const TRANSLATIONS: Record<Language, any> = {
       subtitle: "Start organizing your finances today.",
       monthly: "Monthly",
       annual: "Annual",
-      saveBadge: "Save 10%",
       currencySymbol: "$",
+      perMonth: "/month",
+      chargedAnnually: "Charged",
+      annually: "annually",
+      mostPopular: "Most Popular",
+      startNow: "Start Now",
       plans: [
-        { name: "Personal", price: 7.99, features: ["Unlimited Personal Account", "Cards", "WhatsApp IA", "Multi-language Support"] },
-        { name: "Pro & Couple", price: 9.99, features: ["All Personal features", "Business Account", "Investments", "Shared Access"], highlight: true }
+        {
+          name: "Start",
+          description: "For those who want to organize their financial life without hassle.",
+          price: 5.99,
+          annualPrice: 61.10,
+          discount: 15,
+          colorScheme: "white",
+          features: ["Web system with interactive charts", "Expense control via WhatsApp by text, audio and image", "Unlimited transactions via WhatsApp", "Customized categories and subcategories", "Individual management and profile customization", "Reminders of bills to pay and receive via WhatsApp", "Financial goals", "Credit card control", "Investment management", "Scheduled payments", "Complete reports", "Data export", "Support via WhatsApp"]
+        },
+        {
+          name: "Plus",
+          description: "For those who share accounts and financial decisions.",
+          price: 7.99,
+          annualPrice: 81.50,
+          discount: 15,
+          colorScheme: "green",
+          highlight: true,
+          features: ["Everything from Start plan", "Shared management", "Each member uses their own WhatsApp number", "Individual alerts for bills to pay and receive", "Centralized view, always updated and visible to all", "1 extra user included at no additional cost", "Goals, cards, investments, scheduled payments and reports for all users", "Data export", "Ideal for couples, families or partners"]
+        },
+        {
+          name: "Pro",
+          description: "For those who run a business and need to separate personal from professional.",
+          price: 9.99,
+          annualPrice: 107.90,
+          discount: 10,
+          colorScheme: "blue",
+          features: ["Everything from previous plans", "Business Account", "Financial management for micro-entrepreneurs", "Personal and business financial goals", "Company card and investment control", "Scheduled payments for fixed expenses", "Complete reports for decision making", "Humanized support via WhatsApp", "Phone support", "Data export", "Reminders of bills to pay and receive via WhatsApp"]
+        }
       ]
     },
     faq: {
