@@ -207,7 +207,7 @@ function App() {
               <img
                 src="/MOCK-UP-MAC-IPHONE.png"
                 alt="FinanzApp Web e Mobile"
-                className="relative w-full max-w-5xl rounded-2xl shadow-2xl border border-slate-200"
+                className="relative w-full max-w-5xl"
               />
             </div>
           </div>
