@@ -121,44 +121,54 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 lg:pt-48 lg:pb-32 px-4 relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-brand-200/40 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-blue-200/40 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+      {/* Hero Section */}
+      <section className="pt-24 pb-12 lg:pt-32 lg:pb-24 px-4 relative overflow-hidden bg-white">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-brand-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-semibold border border-brand-100 mb-8 shadow-sm">
-            <Star className="w-4 h-4 fill-brand-600 text-brand-600" />
-            {t.hero.badge}
-          </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
-            {t.hero.title}
-          </h1>
-          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            {t.hero.subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="w-full sm:w-auto gap-2 group" onClick={() => scrollToSection('pricing')}>
-              <div className="bg-white/20 p-1 rounded-full">
-                <Check className="w-4 h-4" />
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+            {/* Text Column */}
+            <div className="text-center lg:text-left order-last lg:order-first">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-semibold border border-brand-100 mb-6 shadow-sm">
+                <Star className="w-4 h-4 fill-brand-600 text-brand-600" />
+                {t.hero.badge}
+              </span>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                {t.hero.title}
+              </h1>
+              <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                {t.hero.subtitle}
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <Button size="lg" className="w-full sm:w-auto gap-2 group" onClick={() => scrollToSection('pricing')}>
+                  <div className="bg-white/20 p-1 rounded-full">
+                    <Check className="w-4 h-4" />
+                  </div>
+                  {t.hero.ctaPrimary}
+                </Button>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => scrollToSection('pricing')}>
+                  {t.hero.ctaSecondary} <ArrowRight className="w-4 h-4" />
+                </Button>
               </div>
-              {t.hero.ctaPrimary}
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => scrollToSection('pricing')}>
-              {t.hero.ctaSecondary} <ArrowRight className="w-4 h-4" />
-            </Button>
-          </div>
-          <p className="mt-6 text-sm text-slate-500 flex items-center justify-center gap-2">
-            <Shield className="w-4 h-4 text-green-600" />
-            {t.hero.disclaimer}
-          </p>
 
-          {/* Fina with iPhone Image */}
-          <div className="mt-16 flex justify-center">
-            <img
-              src="/fina-iphone.png"
-              alt="Fina - Assistente Financeira"
-              className="max-w-md w-full h-auto rounded-2xl shadow-2xl"
-            />
+              <p className="mt-6 text-sm text-slate-500 flex items-center justify-center lg:justify-start gap-2">
+                <Shield className="w-4 h-4 text-green-600" />
+                {t.hero.disclaimer}
+              </p>
+            </div>
+
+            {/* Image Column */}
+            <div className="flex justify-center lg:justify-end order-first lg:order-last -mb-4 lg:mb-0">
+              <img
+                src="/fina-iphone.png"
+                alt="Fina - Assistente Financeira"
+                className="w-64 sm:w-80 lg:max-w-md h-auto"
+              />
+            </div>
+
           </div>
         </div>
       </section>
