@@ -336,7 +336,7 @@ function App() {
                   </ul>
 
                   <Button
-                    variant={plan.highlight ? 'primary' : 'outline'}
+                    variant="primary"
                     className="w-full"
                     onClick={() => {
                       const link = isAnnual ? plan.annualLink : plan.monthlyLink;
