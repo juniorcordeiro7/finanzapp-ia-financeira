@@ -203,7 +203,7 @@ function App() {
           {/* Platform Mockup */}
           <div className="mt-20 flex justify-center relative z-10">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-brand-500 to-blue-500 rounded-3xl opacity-20 blur-xl"></div>
+
               <img
                 src="/MOCK-UP-MAC-IPHONE.png"
                 alt="FinanzApp Web e Mobile"
