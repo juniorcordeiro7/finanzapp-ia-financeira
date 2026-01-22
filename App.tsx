@@ -301,7 +301,7 @@ function App() {
 
               return (
                 <div key={idx} className={`relative p-8 rounded-3xl border-2 transition-all duration-300 flex flex-col ${plan.highlight
-                  ? 'border-brand-500 bg-white shadow-2xl scale-100 md:scale-105 z-10'
+                  ? 'border-brand-500 bg-slate-50 shadow-2xl scale-100 md:scale-105 z-10'
                   : 'border-slate-200 bg-white hover:border-brand-200'
                   }`}>
                   {plan.highlight && (
