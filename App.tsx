@@ -200,34 +200,47 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
 
-      {/* How It Works */}
-      <section id="how-it-works" className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t.howItWorks.title}</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 relative">
-            {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-1 bg-gradient-to-r from-brand-200 via-brand-400 to-brand-200 z-0"></div>
-
-            {t.howItWorks.steps.map((step: any, idx: number) => (
-              <div key={idx} className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-24 h-24 bg-brand-600 rounded-full flex items-center justify-center shadow-lg shadow-brand-500/30 mb-6 border-4 border-white text-white">
-                  {step.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-slate-600 max-w-xs">{step.desc}</p>
-              </div>
-            ))}
+        {/* Platform Mockup */}
+        <div className="mt-20 flex justify-center relative z-10">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-brand-500 to-blue-500 rounded-3xl opacity-20 blur-xl"></div>
+            <img
+              src="/MOCK-UP-MAC-IPHONE.png"
+              alt="FinanzApp Web e Mobile"
+              className="relative w-full max-w-5xl rounded-2xl shadow-2xl border border-slate-200"
+            />
           </div>
         </div>
-      </section>
+    </div>
+      </section >
 
-      {/* Guide / Tips Section (New) */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+    {/* How It Works */ }
+    < section id = "how-it-works" className = "py-24 bg-white relative" >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t.howItWorks.title}</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 relative">
+          {/* Connecting Line (Desktop) */}
+          <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-1 bg-gradient-to-r from-brand-200 via-brand-400 to-brand-200 z-0"></div>
+
+          {t.howItWorks.steps.map((step: any, idx: number) => (
+            <div key={idx} className="relative z-10 flex flex-col items-center text-center">
+              <div className="w-24 h-24 bg-brand-600 rounded-full flex items-center justify-center shadow-lg shadow-brand-500/30 mb-6 border-4 border-white text-white">
+                {step.icon}
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+              <p className="text-slate-600 max-w-xs">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      </section >
+
+    {/* Guide / Tips Section (New) */ }
+    < section className = "py-24 bg-slate-900 text-white relative overflow-hidden" >
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-500/20 rounded-full blur-3xl"></div>
 
@@ -260,118 +273,118 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-slate-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{t.pricing.title}</h2>
-            <p className="text-slate-500 mb-8">{t.pricing.subtitle}</p>
+    {/* Pricing Section */ }
+    < section id = "pricing" className = "py-24 bg-slate-50 relative overflow-hidden" >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{t.pricing.title}</h2>
+          <p className="text-slate-500 mb-8">{t.pricing.subtitle}</p>
 
-            {/* Toggle Switch */}
-            <div className="flex items-center justify-center gap-4 bg-white p-2 rounded-full shadow-sm inline-flex border border-slate-100">
-              <span className={`text-sm font-semibold px-4 cursor-pointer ${!isAnnual ? 'text-brand-600' : 'text-slate-500'}`} onClick={() => setIsAnnual(false)}>
-                {t.pricing.monthly}
+          {/* Toggle Switch */}
+          <div className="flex items-center justify-center gap-4 bg-white p-2 rounded-full shadow-sm inline-flex border border-slate-100">
+            <span className={`text-sm font-semibold px-4 cursor-pointer ${!isAnnual ? 'text-brand-600' : 'text-slate-500'}`} onClick={() => setIsAnnual(false)}>
+              {t.pricing.monthly}
+            </span>
+            <button
+              onClick={() => setIsAnnual(!isAnnual)}
+              className="relative w-14 h-7 bg-slate-200 rounded-full transition-colors duration-300 focus:outline-none"
+            >
+              <div className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300 ${isAnnual ? 'translate-x-7 bg-brand-600' : ''}`}></div>
+            </button>
+            <span className={`text-sm font-semibold px-4 cursor-pointer flex items-center gap-2 ${isAnnual ? 'text-brand-600' : 'text-slate-500'}`} onClick={() => setIsAnnual(true)}>
+              {t.pricing.annual}
+              <span className="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wide">
+                -15%
               </span>
-              <button
-                onClick={() => setIsAnnual(!isAnnual)}
-                className="relative w-14 h-7 bg-slate-200 rounded-full transition-colors duration-300 focus:outline-none"
-              >
-                <div className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300 ${isAnnual ? 'translate-x-7 bg-brand-600' : ''}`}></div>
-              </button>
-              <span className={`text-sm font-semibold px-4 cursor-pointer flex items-center gap-2 ${isAnnual ? 'text-brand-600' : 'text-slate-500'}`} onClick={() => setIsAnnual(true)}>
-                {t.pricing.annual}
-                <span className="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wide">
-                  -15%
-                </span>
-              </span>
-            </div>
+            </span>
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {t.pricing.plans.map((plan: any, idx: number) => {
-              // Calculate price based on toggle
-              const currency = t.pricing.currencySymbol;
-              const monthlyPrice = plan.price;
-              const annualPrice = plan.annualPrice;
-              const monthlyEquivalent = (annualPrice / 12).toFixed(2);
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {t.pricing.plans.map((plan: any, idx: number) => {
+            // Calculate price based on toggle
+            const currency = t.pricing.currencySymbol;
+            const monthlyPrice = plan.price;
+            const annualPrice = plan.annualPrice;
+            const monthlyEquivalent = (annualPrice / 12).toFixed(2);
 
-              const displayPrice = isAnnual ? monthlyEquivalent : monthlyPrice.toFixed(2);
+            const displayPrice = isAnnual ? monthlyEquivalent : monthlyPrice.toFixed(2);
 
-              return (
-                <div key={idx} className={`relative p-8 rounded-3xl border-2 transition-all duration-300 flex flex-col ${plan.highlight
-                  ? 'border-brand-500 bg-slate-100 shadow-2xl scale-100 md:scale-105 z-10'
-                  : 'border-slate-200 bg-white hover:border-brand-200'
-                  }`}>
-                  {plan.highlight && (
-                    <div className="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-xl uppercase tracking-wider shadow-sm">
-                      {t.pricing.mostPopular}
-                    </div>
-                  )}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</h3>
-                  <p className="text-sm text-slate-600 mb-4 min-h-[40px]">{plan.description}</p>
-                  <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-5xl font-extrabold text-slate-900 tracking-tight">{currency}{displayPrice}</span>
-                    <span className="text-slate-500 font-medium">{t.pricing.perMonth}</span>
+            return (
+              <div key={idx} className={`relative p-8 rounded-3xl border-2 transition-all duration-300 flex flex-col ${plan.highlight
+                ? 'border-brand-500 bg-slate-100 shadow-2xl scale-100 md:scale-105 z-10'
+                : 'border-slate-200 bg-white hover:border-brand-200'
+                }`}>
+                {plan.highlight && (
+                  <div className="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-xl uppercase tracking-wider shadow-sm">
+                    {t.pricing.mostPopular}
                   </div>
-
-                  <div className="h-6 mb-6">
-                    {isAnnual && (
-                      <p className="text-xs text-brand-700 font-semibold bg-brand-50 inline-block px-2 py-1 rounded">
-                        {t.pricing.chargedAnnually} {currency}{annualPrice.toFixed(2)} {t.pricing.annually}
-                      </p>
-                    )}
-                  </div>
-
-                  <ul className="space-y-4 mb-8 flex-1">
-                    {plan.features.map((feat: string, fIdx: number) => (
-                      <li key={fIdx} className="flex items-start gap-3 text-slate-600 text-sm">
-                        <div className="mt-0.5 w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
-                          <Check className="w-3 h-3 text-brand-600" />
-                        </div>
-                        {feat}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Button
-                    variant="primary"
-                    className="w-full"
-                    onClick={() => {
-                      const link = isAnnual ? plan.annualLink : plan.monthlyLink;
-                      window.location.href = link || 'https://app.finanzapp.lat/cadastro';
-                    }}
-                  >
-                    {t.pricing.startNow}
-                  </Button>
+                )}
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</h3>
+                <p className="text-sm text-slate-600 mb-4 min-h-[40px]">{plan.description}</p>
+                <div className="flex items-baseline gap-1 mb-2">
+                  <span className="text-5xl font-extrabold text-slate-900 tracking-tight">{currency}{displayPrice}</span>
+                  <span className="text-slate-500 font-medium">{t.pricing.perMonth}</span>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">{t.faq.title}</h2>
-          <div className="space-y-6">
-            {t.faq.items.map((item: any, idx: number) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <h4 className="font-bold text-lg text-slate-900 mb-2 flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-brand-200 flex items-center justify-center text-brand-800 text-sm">?</div>
-                  {item.q}
-                </h4>
-                <p className="text-slate-600 ml-8">{item.a}</p>
+                <div className="h-6 mb-6">
+                  {isAnnual && (
+                    <p className="text-xs text-brand-700 font-semibold bg-brand-50 inline-block px-2 py-1 rounded">
+                      {t.pricing.chargedAnnually} {currency}{annualPrice.toFixed(2)} {t.pricing.annually}
+                    </p>
+                  )}
+                </div>
+
+                <ul className="space-y-4 mb-8 flex-1">
+                  {plan.features.map((feat: string, fIdx: number) => (
+                    <li key={fIdx} className="flex items-start gap-3 text-slate-600 text-sm">
+                      <div className="mt-0.5 w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
+                        <Check className="w-3 h-3 text-brand-600" />
+                      </div>
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  variant="primary"
+                  className="w-full"
+                  onClick={() => {
+                    const link = isAnnual ? plan.annualLink : plan.monthlyLink;
+                    window.location.href = link || 'https://app.finanzapp.lat/cadastro';
+                  }}
+                >
+                  {t.pricing.startNow}
+                </Button>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
+      </div>
+      </section >
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    {/* FAQ */ }
+    < section className = "py-20 bg-white" >
+      <div className="max-w-3xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">{t.faq.title}</h2>
+        <div className="space-y-6">
+          {t.faq.items.map((item: any, idx: number) => (
+            <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+              <h4 className="font-bold text-lg text-slate-900 mb-2 flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-brand-200 flex items-center justify-center text-brand-800 text-sm">?</div>
+                {item.q}
+              </h4>
+              <p className="text-slate-600 ml-8">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      </section >
+
+    {/* Footer */ }
+    < footer className = "bg-slate-900 text-slate-400 py-12 border-t border-slate-800" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
@@ -425,8 +438,8 @@ function App() {
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-600">
           © {new Date().getFullYear()} FinanzApp. {t.footer.rights}
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 }
 
