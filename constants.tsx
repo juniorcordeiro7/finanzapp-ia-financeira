@@ -354,6 +354,8 @@ export const TRANSLATIONS: Record<Language, any> = {
           discount: 15,
           colorScheme: "green",
           highlight: true,
+          monthlyLink: "https://payfast.greenn.com.br/155016",
+          annualLink: "https://payfast.greenn.com.br/155018",
           features: ["Todo del plan Start", "Gestión compartida", "Cada miembro usa su propio número de WhatsApp", "Alertas individuales de cuentas a pagar y recibir", "Visualización centralizada, siempre actualizada y visible para todos", "1 usuario extra incluido sin costo adicional", "Metas, tarjetas, inversiones, pagos programados e informes para todos los usuarios", "Exportación de datos", "Ideal para parejas, familias o socios"]
         },
         {
