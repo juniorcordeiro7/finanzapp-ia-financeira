@@ -143,7 +143,7 @@ function App() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <Button size="lg" className="w-full sm:w-auto gap-2 group" onClick={() => scrollToSection('pricing')}>
+                <Button size="lg" className="w-full sm:w-auto gap-2 group" onClick={() => window.location.href = 'https://app.finanzapp.lat/cadastro'}>
                   <div className="bg-white/20 p-1 rounded-full">
                     <Check className="w-4 h-4" />
                   </div>
